@@ -1,29 +1,29 @@
+// Registeration Page
 document.getElementById("signupForm")?.addEventListener("submit", function (e) {
   e.preventDefault();
+
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
+  //Creating Object
   const user = {
     name,
     email,
     password,
   };
     console.log(user,"user")
-
+  //Saving to the local storage in JSON form
   localStorage.setItem("user",JSON.stringify(user))
 });
 console.log(localStorage.getItem("user"),"user") 
 
 
-
-document.getElementById("loginForm").addEventListener("submit", function(e){
+// Login Page
+document.getElementById("loginForm")?.addEventListener("submit", function(e){
   e.preventDefault()
   let email = document.getElementById("email").value
   let password = document.getElementById("password").value
-  console.log("Email", email)
-  console.log("Password", password)
-
   let user = JSON.parse(localStorage.getItem("user"))
 
   if(!user){
@@ -41,3 +41,15 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
   
 
 })
+
+// Welcome Page
+function Welcome(){
+  let user = JSON.parse(localStorage.getItem("user"))
+  if(!user){
+    alert("User not registered please sign up first");
+    window.location.href = '/'
+    return;
+  }
+
+  document.getElementById("name").innerText=user.name
+}
