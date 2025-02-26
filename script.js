@@ -15,6 +15,8 @@ document.getElementById("signupForm")?.addEventListener("submit", function (e) {
     console.log(user,"user")
   //Saving to the local storage in JSON form
   localStorage.setItem("user",JSON.stringify(user))
+  alert("Registration Completed")
+  window.location.href="home.html"
 });
 console.log(localStorage.getItem("user"),"user") 
 
@@ -28,13 +30,13 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e){
 
   if(!user){
     alert("User not registered please sign up first");
-    window.location.href = '/index.html'
+    window.location.href = 'index.html'
     return;
   }
 
   if(user.email == email && user.password == password){
     console.log("Success")
-    window.location.href = '/home.html'
+    window.location.href = 'home.html'
   }else{
     window.alert("Wrong credentials")
   }
@@ -47,7 +49,7 @@ function Welcome(){
   let user = JSON.parse(localStorage.getItem("user"))
   if(!user){
     alert("User not registered please sign up first");
-    window.location.href = '/'
+    window.location.href = 'index.html'
     return;
   }
 
