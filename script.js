@@ -28,7 +28,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e){
 
   if(!user){
     alert("User not registered please sign up first");
-    window.location.href = '/'
+    window.location.href = '/index.html'
     return;
   }
 
