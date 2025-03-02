@@ -1,0 +1,127 @@
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 35px;
+    border-radius: 10px;
+    width: 350px;
+    background: radial-gradient(#7b05b670, #000000);
+    box-shadow: -1px 1px 20px 2px rgb(96 44 148 / 50%);
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-bottom: 10px;
+    background: transparent;
+    color: #fff;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background: transparent;
+    color: #8d00ff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    border: 1px solid blue;
+}
+
+button[type="submit"]:hover {
+    background: radial-gradient(#ceaef1, #fff);
+    background: #8d00ff;
+    color: white; 
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+
+a,span{
+    text-align: center;
+    margin-top: 10px;
+    
+    color: #8d00ff;
+}
+
+.welcome{
+    text-align: center;
+}
+
+#socialMediaContainer select{
+    padding: 10px;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+}
+
+#addSocialMedia{
+    padding: 5px;
+    width: 38%;
+    margin: 10px auto;
+    border-radius: 5px;
+    background: transparent;
+    border: none;
+    color:#8d00ff;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.socialMediaEntry{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+.removeSocialMedia{
+    background: none;
+    border: none;
+    color: red;
+    transition: color 0.3s, transform 0.2s;
+}
+a{
+
+    color:#8d00ff;
+    transition: color 0.3s, transform 0.2s;
+}
+#addSocialMedia:hover, .removeSocialMedia:hover, a:hover{
+    color: white;
+}
+

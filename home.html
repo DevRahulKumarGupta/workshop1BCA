@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body onload="Welcome()">
-    <div class="container">
-      <div class="welcome">
-        <h1>Login Successful</h1>
-        <h2>Welcome <span id="name"></span></h2>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./style/home-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container home">
+        <div id="profileContainer">
+          <h2>User Profile</h2>
+          <section class="content">
+            <div class="divider">
+              <img id="profilePic" class="profile-pic" src="" alt="Profile Picture" />
+            </div>
+            <div class="divider">
+              <p><strong>Name:</strong> <span id="profileName"></span></p>
+              <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+              <p><strong>Date of Birth:</strong> <span id="profileDOB"></span></p>
+              <h3>Social Media Links</h3>
+              <ul id="profileSocialMedia"></ul>
+            </div>
+          </section>
+          <button onclick="clearSession()">Logout</button>
+        </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+
+    <script src="./scripts/home.js"></script>
+</body>
 </html>
